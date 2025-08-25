@@ -1,0 +1,17 @@
+# netlify.toml
+[build]
+  # Comando para construir el proyecto
+  command = "npm run build"
+
+  # Carpeta donde Netlify publicará los archivos estáticos
+  publish = "dist"
+
+# Configuración de funciones serverless (si las llegaras a usar)
+[functions]
+  directory = "netlify/functions"
+
+# Opciones de redirección (útil si luego usás routing en React)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
