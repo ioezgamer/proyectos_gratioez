@@ -1,0 +1,5 @@
+{
+  "name": "Gestor de Torneos de Ajedrez (Sistema Suizo)",
+  "description": "Una aplicación para gestionar torneos de ajedrez con el sistema suizo. Permite registrar participantes, generar emparejamientos automáticos, registrar resultados y mostrar tablas de clasificación en tiempo real.",
+  "requestFramePermissions": []
+}
