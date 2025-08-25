@@ -23,9 +23,9 @@ export default defineConfig(({ mode }) => {
     optimizeDeps: {
       exclude: ["better-sqlite3"],
     },
-    server: {
-      host: true, // 🔑 permite acceder desde otra PC en la red
-      port: 5174, // 🔑 puerto fijo
-    },
+   // server: {
+   //   host: true, // 🔑 permite acceder desde otra PC en la red
+   //   port: 5174, // 🔑 puerto fijo
+  //  },
   };
 });
