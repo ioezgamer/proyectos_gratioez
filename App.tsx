@@ -250,7 +250,7 @@ const App: React.FC = () => {
             <aside className="w-full md:w-64 bg-brand-secondary p-4 flex flex-col space-y-4">
                 <div className="flex items-center space-x-3 px-2">
                     <ChessBoardIcon className="w-8 h-8 text-brand-gold" />
-                    <h1 className="text-xl font-bold text-white">Torneo Suizo</h1>
+                    <h1 className="text-xl font-bold text-white">Ajedrez CREA</h1>
                 </div>
                 <nav className="flex-grow space-y-2">
                     <NavButton view={View.Participants} icon={<UsersIcon className="w-5 h-5" />} label="Participantes" />
