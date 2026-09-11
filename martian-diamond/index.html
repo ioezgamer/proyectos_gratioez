@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#101613" />
+  <meta name="description" content="Versión interactiva del rompecabezas Martian Diamond de George Sicherman." />
+  <title>Martian Diamond Online</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <div class="brand">
+        <p class="eyebrow">Rompecabezas geométrico</p>
+        <h1>Martian Diamond</h1>
+        <p class="lede">Haz sitio a la sexta nave. Coloca las seis piezas dentro del diamante sin que ninguna se superponga.</p>
+      </div>
+      <div class="stats" aria-label="Estadísticas de la partida">
+        <div class="stat"><b id="timer">00:00</b><span>Tiempo</span></div>
+        <div class="stat"><b id="moves">0</b><span>Movimientos</span></div>
+        <div class="stat"><b id="insideStat">5/6</b><span>Dentro</span></div>
+      </div>
+    </header>
+
+    <div class="layout">
+      <section class="game-card" aria-label="Tablero de Martian Diamond">
+        <div class="board-wrap">
+          <svg id="game" viewBox="0 0 760 700" role="application" aria-label="Tablero interactivo. Arrastra las piezas al diamante, selecciónalas y usa los controles para girar o voltear.">
+            <defs>
+              <filter id="pieceShadow" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#000" flood-opacity=".35"/></filter>
+              <linearGradient id="trayGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#69736e"/><stop offset="1" stop-color="#3f4944"/></linearGradient>
+            </defs>
+            <rect x="45" y="32" width="670" height="615" rx="32" fill="url(#trayGrad)" stroke="#7d8982" stroke-width="2"/>
+            <rect x="64" y="51" width="632" height="577" rx="23" fill="#4b5550" stroke="#303a35" stroke-width="2"/>
+            <g aria-hidden="true">
+              <circle class="tray-screw" cx="82" cy="69" r="5"/><circle class="tray-screw" cx="678" cy="69" r="5"/>
+              <circle class="tray-screw" cx="82" cy="610" r="5"/><circle class="tray-screw" cx="678" cy="610" r="5"/>
+            </g>
+            <path id="recess" class="recess-outline" d=""/>
+            <g id="grid" class="board-grid" aria-hidden="true"></g>
+            <text x="592" y="250" class="parking-label">PIEZA EXTRA</text>
+            <path d="M528 270 H656" stroke="#78837d" stroke-width="1.5" stroke-dasharray="5 6"/>
+            <text x="300" y="623" class="board-caption">Diamante marciano</text>
+            <g id="pieces"></g>
+          </svg>
+        </div>
+        <div class="controls" aria-label="Controles de pieza">
+          <div class="control-group">
+            <button class="btn icon-btn" id="rotateLeft" type="button" aria-label="Girar pieza 60 grados a la izquierda">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>Girar
+            </button>
+            <button class="btn icon-btn" id="rotateRight" type="button" aria-label="Girar pieza 60 grados a la derecha">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg>Girar
+            </button>
+            <button class="btn icon-btn" id="flip" type="button">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18"/><path d="M9 6 4 12l5 6"/><path d="m15 6 5 6-5 6"/></svg>Voltear
+            </button>
+          </div>
+          <div class="control-group secondary">
+            <button class="btn" id="hint" type="button">Pista</button>
+            <button class="btn primary" id="check" type="button">Comprobar</button>
+          </div>
+        </div>
+      </section>
+
+      <aside class="side">
+        <section class="side-card">
+          <h2>Estado</h2>
+          <div class="status" aria-live="polite">
+            <span id="statusDot" class="status-dot"></span>
+            <p id="statusText">La sexta pieza todavía está fuera. Tendrás que reorganizar las cinco que ya están dentro.</p>
+          </div>
+          <span class="piece-note"><span class="mini-piece" aria-hidden="true"></span><span id="selectedLabel">Seleccionada: pieza extra</span></span>
+        </section>
+        <section class="side-card">
+          <h2>Cómo jugar</h2>
+          <div class="tips">
+            <div class="tip"><strong>1</strong><span>Arrastra cualquier pieza. Al soltarla cerca del diamante, encajará en la retícula.</span></div>
+            <div class="tip"><strong>2</strong><span>Gírala en pasos de 60° o voltéala. El puzzle original permite reflejar las piezas.</span></div>
+            <div class="tip"><strong>3</strong><span>Ganas cuando las <b>6 piezas</b> están totalmente dentro y no se pisan entre sí.</span></div>
+          </div>
+        </section>
+        <section class="side-card">
+          <h2>Atajos</h2>
+          <p><span class="kbd">Q</span> izquierda &nbsp; <span class="kbd">E</span> derecha &nbsp; <span class="kbd">F</span> voltear. Con una pieza dentro, usa las flechas para moverla un paso.</p>
+          <div class="control-group" style="margin-top:13px">
+            <button class="btn" id="colors" type="button">Colores guía</button>
+            <button class="btn danger" id="reset" type="button">Reiniciar</button>
+          </div>
+        </section>
+      </aside>
+    </div>
+    <footer>Versión web independiente inspirada en el puzzle de George Sicherman. <a href="https://www.projectenigma.org/puzzle-manual/martian-diamond" target="_blank" rel="noopener noreferrer">Manual de Project Enigma</a></footer>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <dialog id="winDialog">
+    <div class="dialog-body">
+      <p class="eyebrow">Misión cumplida</p>
+      <h2>¡Las seis naves caben!</h2>
+      <p id="winText">Resolviste el Martian Diamond.</p>
+    </div>
+    <div class="dialog-actions">
+      <button class="btn" id="closeWin" type="button">Cerrar</button>
+      <button class="btn primary" id="playAgain" type="button">Jugar otra vez</button>
+    </div>
+  </dialog>
+  <script src="data.js"></script>
+  <script src="game-core.js"></script>
+  <script src="game-render.js"></script>
+  <script src="game-input.js"></script>
+</body>
+</html>
