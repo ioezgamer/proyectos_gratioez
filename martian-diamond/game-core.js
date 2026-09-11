@@ -2,7 +2,7 @@
 
 const NS='http://www.w3.org/2000/svg';
 const H=Math.sqrt(3)/2, UNIT=43, BOARD_CX=300, BOARD_CY=340, N=7;
-const OFFICIAL_COLORS=['#ff9f1c','#16a6d8','#19ad93','#d6d600','#807cf0','#63ff2d'];
+const OFFICIAL_COLORS=['#ff9f1c','#807cf0','#d6d600','#19ad93','#16a6d8','#63ff2d'];
 const REDS=['#ea3f45','#e63a40','#ec4146','#e73a41','#ed4449','#e83b42'];
 const pieceLayer=document.getElementById('pieces');
 const gridLayer=document.getElementById('grid');
