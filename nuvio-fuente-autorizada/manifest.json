@@ -1,0 +1,18 @@
+{
+  "name": "Ezequiel Nuvio Providers",
+  "version": "1.0.0",
+  "scrapers": [
+    {
+      "id": "fuente-autorizada-demo",
+      "name": "Fuente Autorizada Demo",
+      "description": "Proveedor de prueba para Nuvio con un stream demo autorizado. Sirve como base para conectar una API propia o una fuente con permiso.",
+      "version": "1.0.0",
+      "author": "ioezgamer",
+      "supportedTypes": ["movie", "tv"],
+      "filename": "providers/fuente-autorizada.js",
+      "enabled": true,
+      "formats": ["m3u8"],
+      "contentLanguage": ["es", "en"]
+    }
+  ]
+}
