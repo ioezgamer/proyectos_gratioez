@@ -1,13 +1,14 @@
 {
   "name": "Ezequiel | FlareStore Apps",
   "identifier": "ni.ioezgamer.flarestore.apps",
-  "subtitle": "WQ Files y Tetherless desde sus lanzamientos oficiales",
-  "description": "Fuente independiente para FlareStore / AltStore / SideStore, con actualizaciones periódicas desde GitHub. No afiliada a los desarrolladores ni a FlareStore. Las IPA se descargan desde sus repositorios originales.",
+  "subtitle": "WQ Files y Tetherless, desde sus versiones oficiales",
+  "description": "Fuente independiente para FlareStore, AltStore o SideStore. Las IPA se descargan directamente desde GitHub; no se modifican ni se alojan aquí.",
   "iconURL": "https://raw.githubusercontent.com/kolbicz/WQFiles/main/icons/AppIcon1024.png",
   "tintColor": "#1E8FC7",
   "website": "https://github.com/ioezgamer/proyectos_gratioez/tree/main/flarestore",
   "featuredApps": [
-    "cz.kolbi.wqfiles"
+    "cz.kolbi.wqfiles",
+    "com.ipaside.tetherless"
   ],
   "apps": [
     {
@@ -117,6 +118,54 @@
         ],
         "privacy": {}
       }
+    },
+    {
+      "name": "Tetherless (Modern)",
+      "bundleIdentifier": "com.ipaside.tetherless",
+      "developerName": "pwnapplehat",
+      "subtitle": "Firma y administra aplicaciones en iOS 26+",
+      "localizedDescription": "Herramienta para firmar e instalar IPA directamente desde el iPhone. Edición Modern para iOS 26 y posteriores. La fuente no está afiliada a sus desarrolladores.",
+      "iconURL": "https://raw.githubusercontent.com/pwnapplehat/TetherlessiOS/main/assets/icon-180.png",
+      "tintColor": "#7B61FF",
+      "category": "utilities",
+      "versions": [
+        {
+          "version": "1.2.0",
+          "buildVersion": "90",
+          "date": "2026-11-11",
+          "size": 6904328,
+          "downloadURL": "https://github.com/pwnapplehat/TetherlessiOS/releases/download/v1.2.0/Tetherless-1.2.0-Modern.ipa",
+          "localizedDescription": "## Tetherless 1.2.0\n\n### New\n- **Manage your Apple ID in the app.** A new **Settings → Developer Account** screen shows your signing certificates, App IDs, and devices — and lets you **revoke a certificate** to free up a slot, without opening the Apple Developer portal or another tool. Certificates created by other tools (Xcode, SideStore, …) are clearly labeled, and revoking the one Tetherless currently signs with warns you first.\n\n### Downloads\n- **Modern** — iOS 26 and later: `Tetherless-1.2.0-Modern.ipa`\n- **Legacy** — iOS 17.4–25: `Tetherless-1.2.0-Legacy.ipa`\n\nNot sure which? iOS 26 or newer → Modern. Otherwise → Legacy.\n",
+          "minOSVersion": "26.0"
+        },
+        {
+          "version": "1.1.1",
+          "buildVersion": "89",
+          "date": "2026-11-11",
+          "size": 6752243,
+          "downloadURL": "https://github.com/pwnapplehat/TetherlessiOS/releases/download/v1.1.1/Tetherless-1.1.1-Modern.ipa",
+          "localizedDescription": "## Tetherless 1.1.1\n\n### Fixed\n- **App Groups now work when signing with a free Apple ID.** Apps that share data between the app and its own widgets or extensions — and apps that rely on an App Group — no longer lose that access after signing. If the app's App Group is already registered to a different Apple ID, Tetherless automatically uses a team-scoped one so signing still succeeds.\n- **Custom-certificate import now accepts modern `.p12` files.** Certificates exported by newer tools (OpenSSL 3's default format) that previously failed with *\"Couldn't read the .p12 certificate (Security error -26275)\"* now import correctly. (Fixes [#4](https://github.com/pwnapplehat/TetherlessiOS/issues/4).)\n\n### Downloads\n- **Modern** — iOS 26 and later: `Tetherless-1.1.1-Modern.ipa`\n- **Legacy** — iOS 17.4–25: `Tetherless-1.1.1-Legacy.ipa`\n\nNot sure which? iOS 26 or newer → Modern. Otherwise → Legacy.\n",
+          "minOSVersion": "26.0"
+        },
+        {
+          "version": "1.1.0",
+          "buildVersion": "88",
+          "date": "2026-11-09",
+          "size": 6706180,
+          "downloadURL": "https://github.com/pwnapplehat/TetherlessiOS/releases/download/v1.1.0/Tetherless-1.1.0-Modern.ipa",
+          "localizedDescription": "## Tetherless 1.1.0\n\n### Fixed\n- **File imports now work when Tetherless is installed with a re-signing tool** (eSign, KSign, SideStore, and similar). Previously, picking a file and tapping **Open** did nothing. This fix covers every import in the app — the Library and Files tabs, pairing files, custom certificates, and the Decrypt tab.\n\n### New\n- **Export Unsigned IPA** — a toggle in the Sign screen's advanced options. It applies your configuration and any tweaks, then exports an unsigned `.ipa` you can share and install elsewhere. No Apple ID, pairing, or certificate required.\n- **In-app updates** — Settings → Software Update checks for new releases and downloads them straight into your Library, ready to sign and install.\n- **Import confirmations** — a quick on-screen confirmation when a file is imported.\n\n### Downloads\n- **Modern** — iOS 26 and later (full Liquid Glass look): `Tetherless-1.1.0-Modern.ipa`\n- **Legacy** — iOS 17.4–25 (same features, earlier iOS): `Tetherless-1.1.0-Legacy.ipa`\n",
+          "minOSVersion": "26.0"
+        },
+        {
+          "version": "1.0.0",
+          "buildVersion": "87",
+          "date": "2026-11-08",
+          "size": 6583756,
+          "downloadURL": "https://github.com/pwnapplehat/TetherlessiOS/releases/download/v1.0.0/Tetherless-1.0.0-Modern.ipa",
+          "localizedDescription": "**Tetherless 1.0** — sideload on iPhone, with no computer at all.\r\n\r\nSign and install apps right on your iPhone — no Mac, no PC, no cable, and no jailbreak.\r\n\r\n### Download\r\n\r\n| Build | For your iPhone |\r\n|-------|-----------------|\r\n| **Tetherless-1.0.0-Modern.ipa** | iOS 26 and later |\r\n| **Tetherless-1.0.0-Legacy.ipa** | iOS 17.4 and later |\r\n\r\nIf you're on iOS 26 or newer, grab **Modern**. Otherwise grab **Legacy**.\r\n\r\n### What's inside\r\n\r\n- **Sign & install any IPA** with your free Apple ID or your own certificate.\r\n- **Get a clean copy of apps you own** — download from the App Store and decrypt on-device.\r\n- **Tweak injection** (`.deb` / `.dylib`) while signing.\r\n- **Keep apps alive** — one-tap resign before the 7-day signature expires, Tetherless included.\r\n- **Built-in Files** and a full **custom-certificate** mode (OTA install, no pairing or VPN).\r\n\r\n### Getting started\r\n\r\nSee the [setup guide](https://github.com/pwnapplehat/TetherlessiOS#getting-started) or visit **[tetherlessios.com](https://tetherlessios.com)**.\r\n\r\n---\r\nOnly install apps you own or have the right to use. Not affiliated with Apple Inc.\r\n",
+          "minOSVersion": "26.0"
+        }
+      ]
     }
   ]
 }
