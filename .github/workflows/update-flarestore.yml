@@ -1,0 +1,38 @@
+name: Actualizar fuente FlareStore
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 */6 * * *'
+  push:
+    branches: [main]
+    paths:
+      - 'flarestore/update_source.py'
+      - '.github/workflows/update-flarestore.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  update-source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Update catalog from official GitHub releases
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python flarestore/update_source.py
+      - name: Commit only when catalog has changed
+        run: |
+          if git diff --quiet -- flarestore/source.json; then
+            echo "No version changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add flarestore/source.json
+          git commit -m "chore(flarestore): refresh upstream app versions"
+          git push
