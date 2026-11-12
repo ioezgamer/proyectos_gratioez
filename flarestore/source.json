@@ -148,6 +148,15 @@
       "category": "utilities",
       "versions": [
         {
+          "version": "1.2.1",
+          "buildVersion": "91",
+          "date": "2026-11-12",
+          "size": 7078891,
+          "downloadURL": "https://github.com/pwnapplehat/TetherlessiOS/releases/download/v1.2.1/Tetherless-1.2.1-Modern.ipa",
+          "localizedDescription": "## Automatic refresh (new)\n\nSet up a **Shortcuts automation** and Tetherless re-signs every sideloaded app — and itself — on a schedule, in the background, **even while your iPhone is locked**. No more manually resigning every 7 days. See **Settings → Automate Refresh** for the one-time setup (Enable LocalDevVPN → Refresh All Apps), and there's a new **Refresh All** button in **Library → Installed** to do it by hand any time.\n\n## Multiple Apple IDs for the App Store\n\nSign several Apple IDs in for downloads and switch between them right in the **Decrypt** tab. Manage them in **Settings → Store Access**. Your main signing Apple ID is still used automatically.\n\n## Fixes\n\n- Version history now loads reliably (including right after a fresh launch), and opens from a clear button instead of a hidden long-press.\n- Fixed a duplicate \"Tetherless\" row in **Installed** after an in-app update.\n\n---\n\n**Which build?** iOS 26 and later → **Modern**. iOS 17.4–25 → **Legacy**.",
+          "minOSVersion": "26.0"
+        },
+        {
           "version": "1.2.0",
           "buildVersion": "90",
           "date": "2026-11-11",
