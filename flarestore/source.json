@@ -22,6 +22,24 @@
       "category": "utilities",
       "versions": [
         {
+          "version": "0.9.10",
+          "buildVersion": "90",
+          "date": "2026-11-15",
+          "size": 1918805,
+          "downloadURL": "https://github.com/kolbicz/WQFiles/releases/download/v0.9.10/WQFiles.ipa",
+          "localizedDescription": "Fixes installed apps missing from Apps, App Data and Extension Data (e.g. on iOS 26.5).",
+          "minOSVersion": "26.0"
+        },
+        {
+          "version": "0.9.9",
+          "buildVersion": "89",
+          "date": "2026-11-15",
+          "size": 1918433,
+          "downloadURL": "https://github.com/kolbicz/WQFiles/releases/download/v0.9.9/WQFiles.ipa",
+          "localizedDescription": "App Groups now show their names on iOS 27.2+. Plain Background option, dark and tinted app icon, files you can't open are dimmed, and a clear notice on iOS 18 and older.",
+          "minOSVersion": "26.0"
+        },
+        {
           "version": "0.9.8",
           "buildVersion": "88",
           "date": "2026-11-14",
@@ -193,6 +211,15 @@
       "category": "utilities",
       "versions": [
         {
+          "version": "1.2.2",
+          "buildVersion": "92",
+          "date": "2026-11-15",
+          "size": 7086101,
+          "downloadURL": "https://github.com/pwnapplehat/TetherlessiOS/releases/download/v1.2.2/Tetherless-1.2.2-Modern.ipa",
+          "localizedDescription": "## Optimized for iPhone Duo\n\nTetherless now fills the full inner display on Apple's foldable **iPhone Duo** and adapts as you fold and unfold — instead of running in a letterboxed window. (Modern build; iOS 26 devices are unaffected.)\n\n## Smaller improvements\n\n- **Decrypted files are named clearly** — a decrypted app saves as `AppName-<version>_Decrypted.ipa`, and an exported unsigned IPA as `AppName-<version>_Modified.ipa`, so versions don't collide.\n- **Custom-certificate mode:** the bundle-identifier field is now directly editable (pre-filled with the app's original id) — no more \"Automatic\" toggle that didn't apply in that mode.\n\n---\n\n**Which build?** iOS 26 and later → **Modern**. iOS 17.4–18 → **Legacy**.",
+          "minOSVersion": "26.0"
+        },
+        {
           "version": "1.2.1",
           "buildVersion": "91",
           "date": "2026-11-12",
@@ -226,15 +253,6 @@
           "size": 6706180,
           "downloadURL": "https://github.com/pwnapplehat/TetherlessiOS/releases/download/v1.1.0/Tetherless-1.1.0-Modern.ipa",
           "localizedDescription": "## Tetherless 1.1.0\n\n### Fixed\n- **File imports now work when Tetherless is installed with a re-signing tool** (eSign, KSign, SideStore, and similar). Previously, picking a file and tapping **Open** did nothing. This fix covers every import in the app — the Library and Files tabs, pairing files, custom certificates, and the Decrypt tab.\n\n### New\n- **Export Unsigned IPA** — a toggle in the Sign screen's advanced options. It applies your configuration and any tweaks, then exports an unsigned `.ipa` you can share and install elsewhere. No Apple ID, pairing, or certificate required.\n- **In-app updates** — Settings → Software Update checks for new releases and downloads them straight into your Library, ready to sign and install.\n- **Import confirmations** — a quick on-screen confirmation when a file is imported.\n\n### Downloads\n- **Modern** — iOS 26 and later (full Liquid Glass look): `Tetherless-1.1.0-Modern.ipa`\n- **Legacy** — iOS 17.4–25 (same features, earlier iOS): `Tetherless-1.1.0-Legacy.ipa`\n",
-          "minOSVersion": "26.0"
-        },
-        {
-          "version": "1.0.0",
-          "buildVersion": "87",
-          "date": "2026-11-08",
-          "size": 6583756,
-          "downloadURL": "https://github.com/pwnapplehat/TetherlessiOS/releases/download/v1.0.0/Tetherless-1.0.0-Modern.ipa",
-          "localizedDescription": "**Tetherless 1.0** — sideload on iPhone, with no computer at all.\r\n\r\nSign and install apps right on your iPhone — no Mac, no PC, no cable, and no jailbreak.\r\n\r\n### Download\r\n\r\n| Build | For your iPhone |\r\n|-------|-----------------|\r\n| **Tetherless-1.0.0-Modern.ipa** | iOS 26 and later |\r\n| **Tetherless-1.0.0-Legacy.ipa** | iOS 17.4 and later |\r\n\r\nIf you're on iOS 26 or newer, grab **Modern**. Otherwise grab **Legacy**.\r\n\r\n### What's inside\r\n\r\n- **Sign & install any IPA** with your free Apple ID or your own certificate.\r\n- **Get a clean copy of apps you own** — download from the App Store and decrypt on-device.\r\n- **Tweak injection** (`.deb` / `.dylib`) while signing.\r\n- **Keep apps alive** — one-tap resign before the 7-day signature expires, Tetherless included.\r\n- **Built-in Files** and a full **custom-certificate** mode (OTA install, no pairing or VPN).\r\n\r\n### Getting started\r\n\r\nSee the [setup guide](https://github.com/pwnapplehat/TetherlessiOS#getting-started) or visit **[tetherlessios.com](https://tetherlessios.com)**.\r\n\r\n---\r\nOnly install apps you own or have the right to use. Not affiliated with Apple Inc.\r\n",
           "minOSVersion": "26.0"
         }
       ]
