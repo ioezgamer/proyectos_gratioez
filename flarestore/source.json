@@ -22,6 +22,42 @@
       "category": "utilities",
       "versions": [
         {
+          "version": "0.9.15",
+          "buildVersion": "100",
+          "date": "2026-11-16",
+          "size": 2076710,
+          "downloadURL": "https://github.com/kolbicz/WQFiles/releases/download/v0.9.15/WQFiles.ipa",
+          "localizedDescription": "Recognizes iOS 27.3 beta 2+, where Apple patched worse_query. The access cache repairs itself when another app in the App Group broke it.",
+          "minOSVersion": "26.0"
+        },
+        {
+          "version": "0.9.14",
+          "buildVersion": "99",
+          "date": "2026-11-16",
+          "size": 2071017,
+          "downloadURL": "https://github.com/kolbicz/WQFiles/releases/download/v0.9.14/WQFiles.ipa",
+          "localizedDescription": "Show Folder Sizes, empty folder hints, Colored Cards with a pickable color, themed tiles; WQ Files is back in the Files app; fixes wrong app names on iOS 26.5 and the Crash Logs note.",
+          "minOSVersion": "26.0"
+        },
+        {
+          "version": "0.9.13",
+          "buildVersion": "96",
+          "date": "2026-11-16",
+          "size": 2053060,
+          "downloadURL": "https://github.com/kolbicz/WQFiles/releases/download/v0.9.13/WQFiles.ipa",
+          "localizedDescription": "Apps and Cache Cleaner scans are fast again (more than twice as fast as 0.9.11 and 0.9.12).",
+          "minOSVersion": "26.0"
+        },
+        {
+          "version": "0.9.12",
+          "buildVersion": "94",
+          "date": "2026-11-16",
+          "size": 2053202,
+          "downloadURL": "https://github.com/kolbicz/WQFiles/releases/download/v0.9.12/WQFiles.ipa",
+          "localizedDescription": "Wi-Fi Sharing: browse, download and upload files from any browser on the same Wi-Fi. Themes with importable .wqtheme files, Recent folders and files, progress bars, and a fix for a frozen screen.",
+          "minOSVersion": "26.0"
+        },
+        {
           "version": "0.9.11",
           "buildVersion": "92",
           "date": "2026-11-15",
