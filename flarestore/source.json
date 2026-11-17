@@ -22,6 +22,15 @@
       "category": "utilities",
       "versions": [
         {
+          "version": "0.9.16",
+          "buildVersion": "101",
+          "date": "2026-11-16",
+          "size": 2078252,
+          "downloadURL": "https://github.com/kolbicz/WQFiles/releases/download/v0.9.16/WQFiles.ipa",
+          "localizedDescription": "Works inside LiveContainer again. Cache Cleaner: Clean is ready after a scan, plus Invert Selection. Wi-Fi uploads stop with sharing.",
+          "minOSVersion": "26.0"
+        },
+        {
           "version": "0.9.15",
           "buildVersion": "100",
           "date": "2026-11-16",
