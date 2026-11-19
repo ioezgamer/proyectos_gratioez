@@ -283,6 +283,15 @@
       "category": "utilities",
       "versions": [
         {
+          "version": "1.2.5",
+          "buildVersion": "95",
+          "date": "2026-11-19",
+          "size": 7173542,
+          "downloadURL": "https://github.com/pwnapplehat/TetherlessiOS/releases/download/v1.2.5/Tetherless-1.2.5-Modern.ipa",
+          "localizedDescription": "## Sign much bigger apps — and old universal apps\n\n- **Multi-gigabyte apps** now sign on-device without running out of memory. The whole pipeline — unzip, hash, sign, repackage — streams to and from disk, so even a **3.5 GB** app signs and installs. Large apps also sign **noticeably faster** (each file is hashed once per sign).\n- **Older 32/64-bit \"universal\" apps** now sign correctly — Tetherless keeps the 64-bit slice your device actually runs and drops the dead 32-bit one.\n\n## Decryption improvements\n\n- A decrypted app is now saved as a **clean, fully-decrypted build**, so it sideloads with **any** tool, not just Tetherless.\n- Apps with tiny helper frameworks (e.g. Firebase's) no longer stop the decrypt partway through.\n\n## Clearer errors\n\n- When signing can't finish, Tetherless shows the **actual reason** instead of a generic \"check Diagnostics\" message.\n\n---\n\n**Which build?** iOS 26 and later → **Modern**. iOS 17.4–18 → **Legacy**.\n",
+          "minOSVersion": "26.0"
+        },
+        {
           "version": "1.2.3",
           "buildVersion": "93",
           "date": "2026-11-18",
@@ -316,15 +325,6 @@
           "size": 6904328,
           "downloadURL": "https://github.com/pwnapplehat/TetherlessiOS/releases/download/v1.2.0/Tetherless-1.2.0-Modern.ipa",
           "localizedDescription": "## Tetherless 1.2.0\n\n### New\n- **Manage your Apple ID in the app.** A new **Settings → Developer Account** screen shows your signing certificates, App IDs, and devices — and lets you **revoke a certificate** to free up a slot, without opening the Apple Developer portal or another tool. Certificates created by other tools (Xcode, SideStore, …) are clearly labeled, and revoking the one Tetherless currently signs with warns you first.\n\n### Downloads\n- **Modern** — iOS 26 and later: `Tetherless-1.2.0-Modern.ipa`\n- **Legacy** — iOS 17.4–25: `Tetherless-1.2.0-Legacy.ipa`\n\nNot sure which? iOS 26 or newer → Modern. Otherwise → Legacy.\n",
-          "minOSVersion": "26.0"
-        },
-        {
-          "version": "1.1.1",
-          "buildVersion": "89",
-          "date": "2026-11-11",
-          "size": 6752243,
-          "downloadURL": "https://github.com/pwnapplehat/TetherlessiOS/releases/download/v1.1.1/Tetherless-1.1.1-Modern.ipa",
-          "localizedDescription": "## Tetherless 1.1.1\n\n### Fixed\n- **App Groups now work when signing with a free Apple ID.** Apps that share data between the app and its own widgets or extensions — and apps that rely on an App Group — no longer lose that access after signing. If the app's App Group is already registered to a different Apple ID, Tetherless automatically uses a team-scoped one so signing still succeeds.\n- **Custom-certificate import now accepts modern `.p12` files.** Certificates exported by newer tools (OpenSSL 3's default format) that previously failed with *\"Couldn't read the .p12 certificate (Security error -26275)\"* now import correctly. (Fixes [#4](https://github.com/pwnapplehat/TetherlessiOS/issues/4).)\n\n### Downloads\n- **Modern** — iOS 26 and later: `Tetherless-1.1.1-Modern.ipa`\n- **Legacy** — iOS 17.4–25: `Tetherless-1.1.1-Legacy.ipa`\n\nNot sure which? iOS 26 or newer → Modern. Otherwise → Legacy.\n",
           "minOSVersion": "26.0"
         }
       ]
